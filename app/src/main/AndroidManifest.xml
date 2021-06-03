@@ -9,11 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.KelabangApp">
-        <activity android:name=".MainActivity"></activity>
-        <activity android:name=".SplashScreen"
-
-            >
-
+        <activity android:name=".Lihat_Laporan_Jalan_Selesai"></activity>
+        <activity android:name=".Tambah_laporan_jalan" />
+        <activity android:name=".MainActivity" />
+        <activity android:name=".SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
