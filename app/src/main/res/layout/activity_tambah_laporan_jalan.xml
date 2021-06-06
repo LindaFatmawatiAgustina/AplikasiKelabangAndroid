@@ -1,9 +1,142 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
     tools:context=".Tambah_laporan_jalan">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/grey_change"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize">
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="5dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/border_forms">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="15dp"
+                    tools:context=".CreatePengunjung">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:gravity="center"
+                        android:text="Tambah Laporan Jalan "
+                        android:textColor="@color/black"
+                        android:textColorLink="@color/black"
+                        android:textSize="30sp"
+                        android:textStyle="bold" />
+
+                    <Button
+                        android:id="@+id/bt_upload_jalan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="0dp"
+                        android:background="@drawable/border_forms"
+                        android:backgroundTint="@color/grey_change"
+                        android:minHeight="0dp"
+                        android:padding="14dp"
+                        android:text="Upload foto jalan"
+                        android:textColor="@android:color/black"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Foto maksimal 2 MB"
+                        android:textColor="@color/black"
+                        android:textSize="15sp" />
+
+
+                    <RelativeLayout
+                        android:layout_width="350dp"
+                        android:layout_height="300dp"
+                        android:background="@drawable/border_forms">
+
+                        <ImageView
+                            android:id="@+id/gambar_jalan"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_margin="10dp" />
+                    </RelativeLayout>
+
+                    <Button
+                        android:id="@+id/bt_upload_lokasi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="5dp"
+                        android:background="@drawable/border_forms"
+                        android:backgroundTint="@color/grey_change"
+                        android:minHeight="0dp"
+                        android:padding="14dp"
+                        android:text="Upload Lokasi"
+                        android:textColor="@android:color/black"
+                        android:textSize="20sp" />
+
+                    <EditText
+                        android:id="@+id/set_lokasi"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:layout_marginBottom="8dp"
+                        android:background="@drawable/border_forms"
+                        android:hint=""
+                        android:inputType="textMultiLine"
+                        android:paddingLeft="16dp"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/black"
+                        android:textSize="16sp" />
+
+
+                    <Button
+                        android:id="@+id/simpan_laporan"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/border_forms"
+                        android:backgroundTint="@color/grey_change"
+                        android:minHeight="0dp"
+                        android:padding="14dp"
+                        android:text="Tambah Laporan"
+                        android:textColor="@color/black"
+                        android:textSize="14sp" />
+
+
+                </LinearLayout>
+            </ScrollView>
+        </RelativeLayout>
+    </RelativeLayout>
+</LinearLayout>

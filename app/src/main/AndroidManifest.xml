@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.KelabangApp">
-        <activity android:name=".Lihat_Laporan_Jalan_Selesai"></activity>
+        <activity android:name=".Register"></activity>
+        <activity android:name=".Login" />
+        <activity android:name=".Lihat_Laporan_Jalan_Selesai" />
         <activity android:name=".Tambah_laporan_jalan" />
         <activity android:name=".MainActivity" />
         <activity android:name=".SplashScreen">
