@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">KelabangApp</string>
+    <string name="sharepPref">Kelabang</string>
 </resources>

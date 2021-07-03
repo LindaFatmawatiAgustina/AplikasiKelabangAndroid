@@ -68,7 +68,7 @@
                         android:backgroundTint="@color/grey_change"
                         android:minHeight="0dp"
                         android:padding="14dp"
-                        android:text="Upload foto jalan"
+                        android:text="Upload foto jalan 1"
                         android:textColor="@android:color/black"
                         android:textSize="20sp" />
 
@@ -87,6 +87,74 @@
 
                         <ImageView
                             android:id="@+id/gambar_jalan"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_margin="10dp" />
+                    </RelativeLayout>
+                    <Button
+                        android:id="@+id/bt_upload_jalan2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="0dp"
+                        android:background="@drawable/border_forms"
+                        android:backgroundTint="@color/grey_change"
+                        android:minHeight="0dp"
+                        android:padding="14dp"
+                        android:text="Upload foto jalan 2"
+                        android:textColor="@android:color/black"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Foto maksimal 2 MB"
+                        android:textColor="@color/black"
+                        android:textSize="15sp" />
+
+
+                    <RelativeLayout
+                        android:layout_width="350dp"
+                        android:layout_height="300dp"
+                        android:background="@drawable/border_forms">
+
+                        <ImageView
+                            android:id="@+id/gambar_jalan2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_margin="10dp" />
+                    </RelativeLayout>
+                    <Button
+                        android:id="@+id/bt_upload_jalan3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="0dp"
+                        android:background="@drawable/border_forms"
+                        android:backgroundTint="@color/grey_change"
+                        android:minHeight="0dp"
+                        android:padding="14dp"
+                        android:text="Upload foto jalan 3"
+                        android:textColor="@android:color/black"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Foto maksimal 2 MB"
+                        android:textColor="@color/black"
+                        android:textSize="15sp" />
+
+
+                    <RelativeLayout
+                        android:layout_width="350dp"
+                        android:layout_height="300dp"
+                        android:background="@drawable/border_forms">
+
+                        <ImageView
+                            android:id="@+id/gambar_jalan3"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"

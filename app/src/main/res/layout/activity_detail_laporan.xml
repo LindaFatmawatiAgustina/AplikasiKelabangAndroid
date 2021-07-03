@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".DetailLaporan">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/grey_change"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize">
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+       >
+
+        <LinearLayout
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:orientation="vertical"
+            android:layout_margin="10dp"
+            android:padding="8dp">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Detail Laporan"
+                android:layout_gravity="center"
+                android:textStyle="bold"
+                android:textSize="30sp"
+                android:textColor="@color/black" />
+            <ImageView
+                android:id="@+id/detailGambarJalan"
+                android:layout_width="match_parent"
+                android:layout_height="350dp"
+                android:background="@drawable/ic_launcher_foreground"
+                android:padding="4dp"/>
+            <ImageView
+                android:id="@+id/detailGambarJalan2"
+                android:layout_width="match_parent"
+                android:layout_height="350dp"
+                android:background="@drawable/ic_launcher_foreground"
+                android:padding="4dp"/>
+            <ImageView
+                android:id="@+id/detailGambarJalan3"
+                android:layout_width="match_parent"
+                android:layout_height="350dp"
+                android:background="@drawable/ic_launcher_foreground"
+                android:padding="4dp"/>
+
+
+            <TextView
+                android:background="@drawable/border_forms"
+                android:id="@+id/detailNamaJalan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="Nama Jalan"
+                android:inputType="textMultiLine"
+                android:textColor="@color/black"
+                />
+            <TextView
+                android:layout_marginTop="10dp"
+                android:background="@drawable/border_forms"
+                android:id="@+id/detailstatus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="status"
+                android:inputType="textMultiLine"
+                android:textColor="@color/black"
+                />
+            <TextView
+                android:layout_marginTop="10dp"
+                android:background="@drawable/border_forms"
+                android:id="@+id/detailLat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="Lat"
+                android:inputType="textMultiLine"
+                android:textColor="@color/black"
+                />
+            <TextView
+                android:layout_marginTop="10dp"
+                android:background="@drawable/border_forms"
+                android:id="@+id/detailLng"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="Lng"
+                android:inputType="textMultiLine"
+                android:textColor="@color/black"
+                />
+        </LinearLayout>
+    </LinearLayout>
+    </ScrollView>
+</LinearLayout>
