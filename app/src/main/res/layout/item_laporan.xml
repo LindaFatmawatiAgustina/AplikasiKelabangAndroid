@@ -18,6 +18,7 @@
         <ImageView
             android:id="@+id/iv_jalan"
             android:layout_marginTop="20dp"
+            android:background="@drawable/ic_baseline_bookmarks_24"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="4dp"/>
