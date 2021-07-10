@@ -10,12 +10,6 @@ import com.aer.kelabangapp.Model.ModelLihatLaporanJalan
 import com.aer.kelabangapp.databinding.ItemLaporanBinding
 import com.bumptech.glide.Glide
 
-/**
- * Created by Dhimas Panji Sastra on
- * Copyright (c)  . All rights reserved.
- * Last modified $file.lastModified
- * Made With ❤ for U
- */
 class AdapterLihatLaporanSelesai(
     private val dataset: List<ModelLihatLaporanJalan>,
     private val context: Context
@@ -42,7 +36,7 @@ class AdapterLihatLaporanSelesai(
         holder.binding.listNamaJalan.text = dataset[position].namaJalan
         holder.binding.tanggalLaporan.text = dataset[position].tanggalLaporan
         holder.binding.Status.text = dataset[position].status
-        Glide.with(context).load("http://192.168.1.5/aplikasikelabang/public/asset-template/img/${dataset[position].fileGambar}").into(holder.binding.ivJalan)
+        Glide.with(context).load("http://192.168.1.4/aplikasikelabang/public/asset-template/img/${dataset[position].fileGambar}").into(holder.binding.ivJalan)
 
         holder.itemView.setOnClickListener {
             val i = Intent(context,DetailLaporan::class.java)

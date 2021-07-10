@@ -8,21 +8,6 @@
     android:orientation="vertical"
     tools:context=".Tambah_laporan_jalan">
 
-    <com.google.android.material.appbar.AppBarLayout
-        android:id="@+id/appBarLayout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/grey_change"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize">
-        </androidx.appcompat.widget.Toolbar>
-
-    </com.google.android.material.appbar.AppBarLayout>
-
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -82,7 +67,7 @@
 
                     <RelativeLayout
                         android:layout_width="350dp"
-                        android:layout_height="300dp"
+                        android:layout_height="200dp"
                         android:background="@drawable/border_forms">
 
                         <ImageView
@@ -116,7 +101,7 @@
 
                     <RelativeLayout
                         android:layout_width="350dp"
-                        android:layout_height="300dp"
+                        android:layout_height="200dp"
                         android:background="@drawable/border_forms">
 
                         <ImageView
@@ -150,7 +135,7 @@
 
                     <RelativeLayout
                         android:layout_width="350dp"
-                        android:layout_height="300dp"
+                        android:layout_height="200dp"
                         android:background="@drawable/border_forms">
 
                         <ImageView
@@ -171,7 +156,7 @@
                         android:backgroundTint="@color/grey_change"
                         android:minHeight="0dp"
                         android:padding="14dp"
-                        android:text="Upload Lokasi"
+                        android:text="Pilih Lokasi"
                         android:textColor="@android:color/black"
                         android:textSize="20sp" />
 

@@ -44,11 +44,13 @@ import java.util.*
 class Tambah_laporan_jalan : AppCompatActivity(), EasyPermissions.PermissionCallbacks {
     private lateinit var tambahLaporanJalanBinding: ActivityTambahLaporanJalanBinding
     private lateinit var session: SessionManager
-    private var UriPhoto: Uri? = null
+    //    private var UriPhoto: Uri? = null
     private var BitPhoto: Bitmap? = null
     var latnow = 0.0
     var longnow = 0.0
     private var StringImage: String = ""
+    private var StringImage2: String = ""
+    private var StringImage3: String = ""
     private var Nama_Jalan: String = ""
     lateinit var locationRequest: LocationRequest
     lateinit var fusedLocationProviderClient: FusedLocationProviderClient
@@ -68,24 +70,36 @@ class Tambah_laporan_jalan : AppCompatActivity(), EasyPermissions.PermissionCall
         tambahLaporanJalanBinding.btUploadJalan.setOnClickListener {
             pickImage()
         }
+        tambahLaporanJalanBinding.btUploadJalan2.setOnClickListener { pickImage2() }
+        tambahLaporanJalanBinding.btUploadJalan3.setOnClickListener { pickImage3() }
         tambahLaporanJalanBinding.simpanLaporan.setOnClickListener {
             try {
-                if (Nama_Jalan.trim().isEmpty() || StringImage.trim().isEmpty()){
-                    pDialog = SweetAlertDialog(this@Tambah_laporan_jalan, SweetAlertDialog.WARNING_TYPE)
-                        .setTitleText("Isi Semua Form")
-                        .setConfirmClickListener {
-                            hideDialog()
-                        }
+                if (Nama_Jalan.trim().isEmpty() || StringImage.trim().isEmpty()) {
+                    pDialog =
+                        SweetAlertDialog(this@Tambah_laporan_jalan, SweetAlertDialog.WARNING_TYPE)
+                            .setTitleText("Isi minimal 1 foto dan pilih lokasi")
+                            .setConfirmClickListener {
+                                hideDialog()
+                            }
                     showDialog()
-                }else if (latnow.isNaN() || longnow.isNaN()){
-                    pDialog = SweetAlertDialog(this@Tambah_laporan_jalan, SweetAlertDialog.WARNING_TYPE)
-                        .setTitleText("Periksa Lokasi Anda")
-                        .setConfirmClickListener {
-                            hideDialog()
-                        }
+                } else if (latnow.isNaN() || longnow.isNaN()) {
+                    pDialog =
+                        SweetAlertDialog(this@Tambah_laporan_jalan, SweetAlertDialog.WARNING_TYPE)
+                            .setTitleText("Periksa Lokasi Anda")
+                            .setConfirmClickListener {
+                                hideDialog()
+                            }
                     showDialog()
-                }else{
-                    tambahLaporan(session.getId().toString(), Nama_Jalan, latnow, longnow, StringImage)
+                } else {
+                    tambahLaporan(
+                        session.getId().toString(),
+                        Nama_Jalan,
+                        latnow,
+                        longnow,
+                        StringImage,
+                        StringImage2,
+                        StringImage3
+                    )
 
                 }
 
@@ -108,13 +122,15 @@ class Tambah_laporan_jalan : AppCompatActivity(), EasyPermissions.PermissionCall
         nama_jalan: String,
         lat: Double,
         lng: Double,
-        gambar: String
+        gambar: String,
+        gambar2: String,
+        gambar3: String
     ) {
         pDialog = SweetAlertDialog(this@Tambah_laporan_jalan, SweetAlertDialog.PROGRESS_TYPE)
         pDialog.getProgressHelper().setBarColor(Color.parseColor("#DA1F3E"))
         pDialog.setCancelable(false)
         pDialog.setTitleText("Mohon Tunggu...")
-        val url = "http://192.168.1.5/aplikasikelabang/public/api/tambahlaporan/$id"
+        val url = "http://192.168.1.4/aplikasikelabang/public/api/tambahlaporan/$id"
         showDialog()
         val request: StringRequest =
             object : StringRequest(Method.POST, url, Response.Listener { response ->
@@ -141,14 +157,33 @@ class Tambah_laporan_jalan : AppCompatActivity(), EasyPermissions.PermissionCall
 
 
                 } catch (e: java.lang.Exception) {
+                    SweetAlertDialog(this@Tambah_laporan_jalan, SweetAlertDialog.ERROR_TYPE)
+                        .setTitleText("Gagal Menambahkan Laporan")
+                        .setContentText("Coba Lagi")
+                        .setConfirmClickListener {
+                            hideDialog()
+                        }.show()
                     e.printStackTrace()
                 }
-            }, Response.ErrorListener { error -> Log.d("API", error.toString())
+            }, Response.ErrorListener { error ->
+                SweetAlertDialog(this@Tambah_laporan_jalan, SweetAlertDialog.ERROR_TYPE)
+                    .setTitleText("Gagal Menambahkan Laporan")
+                    .setContentText("Coba Lagi")
+                    .setConfirmClickListener {
+                        hideDialog()
+                    }.show()
+                Log.d("API", error.toString())
             }) {
 
                 override fun getParams(): Map<String, String> {
                     val params: MutableMap<String, String> = HashMap()
                     //Change with your post params
+                    if (StringImage2.trim().isNotEmpty()){
+                        params["file_gambar2"] = gambar2
+                    }
+                    if (StringImage3.trim().isNotEmpty()){
+                        params["file_gambar3"] = gambar3
+                    }
                     params["nama_jalan"] = nama_jalan
                     params["latitude"] = lat.toString()
                     params["longitude"] = lng.toString()
@@ -196,9 +231,49 @@ class Tambah_laporan_jalan : AppCompatActivity(), EasyPermissions.PermissionCall
         if (EasyPermissions.hasPermissions(this, *perms)) {
             val a = CropImage.activity()
                 .setGuidelines(CropImageView.Guidelines.ON)
-                .setAspectRatio(4, 4)
+                .setAspectRatio(12, 6)
                 .getIntent(this)
             startActivityForResult(a, 1)
+        } else {
+            EasyPermissions.requestPermissions(
+                this, "Membutuhkan akses kamera",
+                200, *perms
+            )
+        }
+    }
+
+    @AfterPermissionGranted(200)
+    private fun pickImage2() {
+        val perms = arrayOf(
+            Manifest.permission.CAMERA,
+            Manifest.permission.READ_EXTERNAL_STORAGE
+        )
+        if (EasyPermissions.hasPermissions(this, *perms)) {
+            val a = CropImage.activity()
+                .setGuidelines(CropImageView.Guidelines.ON)
+                .setAspectRatio(12, 6)
+                .getIntent(this)
+            startActivityForResult(a, 3)
+        } else {
+            EasyPermissions.requestPermissions(
+                this, "Membutuhkan akses kamera",
+                200, *perms
+            )
+        }
+    }
+
+    @AfterPermissionGranted(200)
+    private fun pickImage3() {
+        val perms = arrayOf(
+            Manifest.permission.CAMERA,
+            Manifest.permission.READ_EXTERNAL_STORAGE
+        )
+        if (EasyPermissions.hasPermissions(this, *perms)) {
+            val a = CropImage.activity()
+                .setGuidelines(CropImageView.Guidelines.ON)
+                .setAspectRatio(12, 6)
+                .getIntent(this)
+            startActivityForResult(a, 4)
         } else {
             EasyPermissions.requestPermissions(
                 this, "Membutuhkan akses kamera",
@@ -226,7 +301,7 @@ class Tambah_laporan_jalan : AppCompatActivity(), EasyPermissions.PermissionCall
             1 -> {
                 val result = CropImage.getActivityResult(data)
                 if (resultCode == Activity.RESULT_OK) {
-                    UriPhoto = result.uri
+                    val    UriPhoto = result.uri
                     if (UriPhoto != null) {
                         try {
                             val inputStream: InputStream? =
@@ -252,6 +327,42 @@ class Tambah_laporan_jalan : AppCompatActivity(), EasyPermissions.PermissionCall
                         0
                     )
                 )
+            }
+            3 -> {
+                val result = CropImage.getActivityResult(data)
+                if (resultCode == Activity.RESULT_OK) {
+                    val   UriPhoto = result.uri
+                    if (UriPhoto != null) {
+                        try {
+                            val inputStream: InputStream? =
+                                contentResolver.openInputStream(UriPhoto!!)
+                            BitPhoto = BitmapFactory.decodeStream(inputStream)
+                            StringImage2 = imgToString(BitPhoto!!)
+                            tambahLaporanJalanBinding.gambarJalan2.setImageURI(UriPhoto)
+
+                        } catch (e: IOException) {
+                            e.printStackTrace()
+                        }
+                    }
+                }
+            }
+            4 -> {
+                val result = CropImage.getActivityResult(data)
+                if (resultCode == Activity.RESULT_OK) {
+                    val    UriPhoto = result.uri
+                    if (UriPhoto != null) {
+                        try {
+                            val inputStream: InputStream? =
+                                contentResolver.openInputStream(UriPhoto!!)
+                            BitPhoto = BitmapFactory.decodeStream(inputStream)
+                            StringImage3 = imgToString(BitPhoto!!)
+                            tambahLaporanJalanBinding.gambarJalan3.setImageURI(UriPhoto)
+
+                        } catch (e: IOException) {
+                            e.printStackTrace()
+                        }
+                    }
+                }
             }
         }
     }

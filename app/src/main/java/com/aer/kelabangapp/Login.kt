@@ -64,7 +64,7 @@ class Login : AppCompatActivity() {
         pDialog.setCancelable(false)
         pDialog.setTitleText("Mohon Tunggu...")
         showDialog()
-        val url = "http://192.168.1.5/aplikasikelabang/public/api/login"
+        val url = "http://192.168.1.4/aplikasikelabang/public/api/login"
         val request: StringRequest =
             object : StringRequest(Method.POST, url, Response.Listener { response ->
                 try {

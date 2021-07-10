@@ -7,20 +7,7 @@
     android:orientation="vertical"
     tools:context=".DetailLaporan">
 
-    <com.google.android.material.appbar.AppBarLayout
-        android:id="@+id/appBarLayout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/grey_change"
-        app:layout_constraintTop_toTopOf="parent">
 
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize">
-        </androidx.appcompat.widget.Toolbar>
-
-    </com.google.android.material.appbar.AppBarLayout>
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -49,27 +36,50 @@
                 android:textStyle="bold"
                 android:textSize="30sp"
                 android:textColor="@color/black" />
+            <RelativeLayout
+                android:layout_marginTop="8dp"
+                android:layout_width="match_parent"
+                android:background="@drawable/border_forms"
+                android:layout_height="match_parent">
             <ImageView
                 android:id="@+id/detailGambarJalan"
                 android:layout_width="match_parent"
-                android:layout_height="350dp"
+                android:layout_height="250dp"
+                android:layout_margin="4dp"
                 android:background="@drawable/ic_launcher_foreground"
                 android:padding="4dp"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_marginTop="8dp"
+                android:layout_width="match_parent"
+                android:background="@drawable/border_forms"
+                android:layout_height="match_parent">
             <ImageView
+
                 android:id="@+id/detailGambarJalan2"
                 android:layout_width="match_parent"
-                android:layout_height="350dp"
+                android:layout_height="250dp"
+                android:layout_margin="4dp"
                 android:background="@drawable/ic_launcher_foreground"
                 android:padding="4dp"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_marginTop="8dp"
+                android:layout_width="match_parent"
+                android:background="@drawable/border_forms"
+                android:layout_height="match_parent">
             <ImageView
+
                 android:id="@+id/detailGambarJalan3"
                 android:layout_width="match_parent"
-                android:layout_height="350dp"
+                android:layout_height="250dp"
+                android:layout_margin="4dp"
                 android:background="@drawable/ic_launcher_foreground"
                 android:padding="4dp"/>
-
+            </RelativeLayout>
 
             <TextView
+                android:layout_marginTop="8dp"
                 android:background="@drawable/border_forms"
                 android:id="@+id/detailNamaJalan"
                 android:layout_width="match_parent"
