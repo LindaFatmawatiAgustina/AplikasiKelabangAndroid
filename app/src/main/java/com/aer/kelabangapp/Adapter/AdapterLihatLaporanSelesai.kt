@@ -36,7 +36,7 @@ class AdapterLihatLaporanSelesai(
         holder.binding.listNamaJalan.text = dataset[position].namaJalan
         holder.binding.tanggalLaporan.text = dataset[position].tanggalLaporan
         holder.binding.Status.text = dataset[position].status
-        Glide.with(context).load("http://192.168.1.4/aplikasikelabang/public/asset-template/img/${dataset[position].fileGambar}").into(holder.binding.ivJalan)
+        Glide.with(context).load("http://192.168.43.239/aplikasikelabang/public/asset-template/img/${dataset[position].fileGambar}").into(holder.binding.ivJalan)
 
         holder.itemView.setOnClickListener {
             val i = Intent(context,DetailLaporan::class.java)

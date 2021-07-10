@@ -16,13 +16,13 @@ class DetailLaporan : AppCompatActivity() {
             val laporan: ModelLihatLaporanJalan? = intent.getParcelableExtra("detail")
             if (laporan != null) {
                 Glide.with(this)
-                    .load("http://192.168.1.4/aplikasikelabang/public/asset-template/img/${laporan.fileGambar}")
+                    .load("http://192.168.43.239/aplikasikelabang/public/asset-template/img/${laporan.fileGambar}")
                     .into(detailLaporanBinding.detailGambarJalan)
                 Glide.with(this)
-                    .load("http://192.168.1.4/aplikasikelabang/public/asset-template/img/${laporan.fileGambar2}")
+                    .load("http://192.168.43.239/aplikasikelabang/public/asset-template/img/${laporan.fileGambar2}")
                     .into(detailLaporanBinding.detailGambarJalan2)
                 Glide.with(this)
-                    .load("http://192.168.1.4/aplikasikelabang/public/asset-template/img/${laporan.fileGambar3}")
+                    .load("http://192.168.43.239/aplikasikelabang/public/asset-template/img/${laporan.fileGambar3}")
                     .into(detailLaporanBinding.detailGambarJalan3)
                 detailLaporanBinding.detailNamaJalan.text = laporan.namaJalan
                 detailLaporanBinding.detailstatus.text = laporan.status

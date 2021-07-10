@@ -34,7 +34,7 @@ class Register : AppCompatActivity() {
     }
 
     fun registerAkun(email: String, password: String, nama: String) {
-        val url = "http://192.168.1.4/aplikasikelabang/public/api/register"
+        val url = "http://192.168.43.239/aplikasikelabang/public/api/register"
         val request: StringRequest =
             object : StringRequest(Method.POST, url, Response.Listener { response ->
                 try {

@@ -16,14 +16,14 @@
         android:padding="18dp">
 
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
             android:layout_gravity="center"
             android:layout_marginTop="100dp"
             android:layout_marginBottom="20dp"
-            android:background="@drawable/ic_baseline_bookmarks_24" />
+            android:background="@drawable/logo" />
         <TextView
-            android:text="Kelabang Apps"
+            android:text="Kelabang"
             android:textSize="40sp"
             android:gravity="center"
             android:textColor="@color/black"

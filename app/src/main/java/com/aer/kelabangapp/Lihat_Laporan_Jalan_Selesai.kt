@@ -31,7 +31,7 @@ class Lihat_Laporan_Jalan_Selesai : AppCompatActivity() {
     }
 
     fun lihatLaporan(id: Int?) {
-        val url = "http://192.168.1.4/aplikasikelabang/public/api/lihatlaporan/$id"
+        val url = "http://192.168.43.239/aplikasikelabang/public/api/lihatlaporan/$id"
         val queue = Volley.newRequestQueue(this)
         val request: StringRequest =
             object : StringRequest(Method.GET, url, Response.Listener { response ->
