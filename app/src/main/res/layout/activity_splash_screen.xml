@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center"
-    android:background="@color/white"
+    android:background="@color/blue_btn_bg_color"
     tools:context=".SplashScreen">
 
     <ImageView
@@ -16,6 +16,7 @@
     <TextView
         android:text="Kelabang"
         android:textSize="40sp"
+        android:textStyle="bold"
         android:textColor="@color/black"
         android:gravity="center"
         android:layout_width="match_parent"
@@ -26,6 +27,7 @@
         android:textSize="24sp"
         android:textColor="@color/black"
         android:gravity="center"
+        android:textStyle="bold"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 

@@ -4,26 +4,31 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/blue_btn_bg_color"
     tools:context=".MainActivity">
 
     <LinearLayout
+        android:layout_gravity="center"
+        android:gravity="center"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
 
 
         <TextView
+
             android:id="@+id/txt_nama_dashboard"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
-            android:layout_marginTop="0dp"
+            android:layout_marginTop="100dp"
             android:text="Selamat Datang"
             android:textColor="@color/black"
-            android:textSize="20sp"
+            android:textSize="30sp"
             android:textStyle="bold" />
 
         <TextView
+            android:layout_below="@id/txt_nama_dashboard"
             android:id="@+id/username"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -31,15 +36,15 @@
             android:layout_marginTop="10dp"
             android:text="Nama"
             android:textColor="@color/black"
-            android:textSize="20sp" />
+            android:textSize="26sp" />
 
 
         <GridLayout
-            android:layout_width="350dp"
-            android:layout_height="350dp"
+            android:layout_width="400dp"
+            android:layout_height="400dp"
             android:layout_gravity="center"
-            android:layout_marginTop="50dp"
-            android:layout_marginBottom="100dp"
+            android:layout_marginTop="100dp"
+            android:layout_marginBottom="200dp"
             android:alignmentMode="alignMargins"
             android:columnCount="2"
             android:rowCount="3"
@@ -80,6 +85,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="30dp"
                         android:layout_gravity="center"
+                        android:textSize="24sp"
+                        android:textColor="@color/black"
                         android:text="Lihat Laporan" />
 
                 </LinearLayout>
@@ -118,7 +125,8 @@
                         android:layout_height="30dp"
                         android:layout_gravity="center"
                         android:text="Tambah Laporan"
-                        android:textSize="12sp" />
+                        android:textColor="@color/black"
+                        android:textSize="19sp" />
 
                 </LinearLayout>
 
@@ -155,6 +163,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="30dp"
                         android:layout_gravity="center"
+                        android:textSize="24sp"
+                        android:textColor="@color/black"
                         android:text="Tentang" />
 
 
@@ -193,6 +203,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="30dp"
                         android:layout_gravity="center"
+                        android:textSize="24sp"
+                        android:textColor="@color/black"
                         android:text="Keluar" />
 
                 </LinearLayout>

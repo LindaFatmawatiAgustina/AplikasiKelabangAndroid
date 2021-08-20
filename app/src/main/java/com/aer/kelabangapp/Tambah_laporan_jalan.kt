@@ -130,7 +130,7 @@ class Tambah_laporan_jalan : AppCompatActivity(), EasyPermissions.PermissionCall
         pDialog.getProgressHelper().setBarColor(Color.parseColor("#DA1F3E"))
         pDialog.setCancelable(false)
         pDialog.setTitleText("Mohon Tunggu...")
-        val url = "http://192.168.43.239/aplikasikelabang/public/api/tambahlaporan/$id"
+        val url = "http://192.168.1.4/aplikasikelabang/public/api/tambahlaporan/$id"
         showDialog()
         val request: StringRequest =
             object : StringRequest(Method.POST, url, Response.Listener { response ->

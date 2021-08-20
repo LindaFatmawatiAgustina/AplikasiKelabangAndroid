@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@color/blue_btn_bg_color"
     tools:context=".Lihat_Laporan_Jalan_Selesai">
 
 

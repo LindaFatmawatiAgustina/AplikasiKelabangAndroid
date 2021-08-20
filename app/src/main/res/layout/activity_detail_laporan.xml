@@ -13,13 +13,15 @@
         android:layout_height="match_parent">
 
     <LinearLayout
+        android:background="@color/blue_btn_bg_color"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
        >
 
         <LinearLayout
-            android:background="@color/white"
+
+            android:background="@color/blue_btn_bg_color"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
@@ -31,16 +33,27 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Detail Laporan"
+                android:text="Detail Laporan Jalan"
                 android:layout_gravity="center"
                 android:textStyle="bold"
                 android:textSize="30sp"
+                android:textColor="@color/black" />
+            <TextView
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Foto Jalan"
+                android:layout_gravity="center"
+                android:textStyle="bold"
+                android:textSize="20sp"
                 android:textColor="@color/black" />
             <RelativeLayout
                 android:layout_marginTop="8dp"
                 android:layout_width="match_parent"
                 android:background="@drawable/border_forms"
                 android:layout_height="match_parent">
+
+
             <ImageView
                 android:id="@+id/detailGambarJalan"
                 android:layout_width="match_parent"
@@ -80,6 +93,14 @@
 
             <TextView
                 android:layout_marginTop="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="Nama Jalan"
+                android:inputType="textMultiLine"
+                android:textColor="@color/black"
+                />
+            <TextView
                 android:background="@drawable/border_forms"
                 android:id="@+id/detailNamaJalan"
                 android:layout_width="match_parent"
@@ -89,8 +110,17 @@
                 android:inputType="textMultiLine"
                 android:textColor="@color/black"
                 />
+
             <TextView
                 android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="Status"
+                android:inputType="textMultiLine"
+                android:textColor="@color/black"
+                />
+            <TextView
                 android:background="@drawable/border_forms"
                 android:id="@+id/detailstatus"
                 android:layout_width="match_parent"
@@ -102,6 +132,14 @@
                 />
             <TextView
                 android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="Latitude"
+                android:inputType="textMultiLine"
+                android:textColor="@color/black"
+                />
+            <TextView
                 android:background="@drawable/border_forms"
                 android:id="@+id/detailLat"
                 android:layout_width="match_parent"
@@ -113,6 +151,14 @@
                 />
             <TextView
                 android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="Longitude"
+                android:inputType="textMultiLine"
+                android:textColor="@color/black"
+                />
+            <TextView
                 android:background="@drawable/border_forms"
                 android:id="@+id/detailLng"
                 android:layout_width="match_parent"

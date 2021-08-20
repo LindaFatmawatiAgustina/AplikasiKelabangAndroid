@@ -5,6 +5,7 @@ import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.aer.kelabangapp.BaseURL
 import com.aer.kelabangapp.DetailLaporan
 import com.aer.kelabangapp.Model.ModelLihatLaporanJalan
 import com.aer.kelabangapp.databinding.ItemLaporanBinding
@@ -31,12 +32,12 @@ class AdapterLihatLaporanSelesai(
     override fun getItemCount() = dataset.size
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.binding.listLatitude.text = dataset[position].latitude
-        holder.binding.listLongitude.text = dataset[position].longitude
-        holder.binding.listNamaJalan.text = dataset[position].namaJalan
-        holder.binding.tanggalLaporan.text = dataset[position].tanggalLaporan
-        holder.binding.Status.text = dataset[position].status
-        Glide.with(context).load("http://192.168.43.239/aplikasikelabang/public/asset-template/img/${dataset[position].fileGambar}").into(holder.binding.ivJalan)
+        holder.binding.listLatitude.text = "Latitude : "+dataset[position].latitude
+        holder.binding.listLongitude.text = "Longitude : "+dataset[position].longitude
+        holder.binding.listNamaJalan.text = "Jalan : "+dataset[position].namaJalan
+        holder.binding.tanggalLaporan.text = "Tanggal Laporan : "+dataset[position].tanggalLaporan
+        holder.binding.Status.text = "Status : "+dataset[position].status
+        Glide.with(context).load("http://192.168.1.4/aplikasikelabang/public/asset-template/img/${dataset[position].fileGambar}").into(holder.binding.ivJalan)
 
         holder.itemView.setOnClickListener {
             val i = Intent(context,DetailLaporan::class.java)

@@ -31,13 +31,15 @@ class Lihat_Laporan_Jalan_Selesai : AppCompatActivity() {
     }
 
     fun lihatLaporan(id: Int?) {
-        val url = "http://192.168.43.239/aplikasikelabang/public/api/lihatlaporan/$id"
+        val url = "http://192.168.1.4/aplikasikelabang/public/api/lihatlaporan/$id"
         val queue = Volley.newRequestQueue(this)
         val request: StringRequest =
             object : StringRequest(Method.GET, url, Response.Listener { response ->
                 try {
                     val laporane = ArrayList<ModelLihatLaporanJalan>()
                     val datanya = JSONObject(response).getJSONArray("data")
+                    Log.e("data",datanya.toString())
+                    Log.e("id",id.toString())
                     for (i in 0 until datanya.length()) {
                         val item = datanya.getJSONObject(i)
                         val laporan = ModelLihatLaporanJalan()

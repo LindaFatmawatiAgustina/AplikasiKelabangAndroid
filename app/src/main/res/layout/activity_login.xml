@@ -11,7 +11,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/grey_change"
+        android:background="@color/blue_btn_bg_color"
         android:orientation="vertical"
         android:padding="18dp">
 
@@ -39,7 +39,7 @@
             android:layout_marginBottom="8dp"
             android:fontFamily="sans-serif-condensed-medium"
             android:text="Email"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:textSize="20sp" />
 
         <EditText
@@ -47,12 +47,11 @@
             android:layout_width="match_parent"
             android:layout_height="45dp"
             android:layout_marginBottom="8dp"
-            android:backgroundTint="@color/white"
+            android:textColor="@color/black"
             android:fontFamily="sans-serif-condensed-medium"
             android:hint="Masukkan Email"
             android:inputType="textEmailAddress"
-            android:textColor="@color/white"
-            android:textColorHint="@color/white"
+            android:textColorHint="@color/black"
             android:textSize="16sp" />
 
         <TextView
@@ -63,7 +62,7 @@
             android:layout_marginBottom="8dp"
             android:fontFamily="sans-serif-condensed-medium"
             android:text="Password"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:textSize="20sp" />
 
         <EditText
@@ -76,8 +75,8 @@
             android:fontFamily="sans-serif-condensed-medium"
             android:hint="Masukkan Password"
             android:inputType="textPassword"
-            android:textColor="@color/white"
-            android:textColorHint="@color/white"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
             android:textSize="16sp" />
 
         <Button
@@ -101,7 +100,7 @@
             android:fontFamily="sans-serif-condensed-medium"
             android:gravity="center"
             android:text="Belum Punya akun ? Daftar"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:textSize="20sp" />
 
 

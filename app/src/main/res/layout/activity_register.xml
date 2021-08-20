@@ -10,7 +10,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/grey_40"
+        android:background="@color/blue_btn_bg_color"
         android:orientation="vertical"
         android:padding="18dp">
 
@@ -38,7 +38,7 @@
             android:layout_marginBottom="8dp"
             android:fontFamily="sans-serif-condensed-medium"
             android:text="Nama"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:textSize="20sp" />
 
         <EditText
@@ -47,12 +47,10 @@
             android:layout_height="45dp"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="8dp"
-            android:backgroundTint="@color/white"
             android:fontFamily="sans-serif-condensed-medium"
             android:hint="Masukkan Nama"
             android:inputType="text"
-            android:textColor="@color/white"
-            android:textColorHint="@color/white"
+            android:textColorHint="@color/black"
             android:textSize="16sp" />
 
         <TextView
@@ -63,7 +61,7 @@
             android:layout_marginBottom="8dp"
             android:fontFamily="sans-serif-condensed-medium"
             android:text="Email"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:textSize="20sp" />
 
         <EditText
@@ -72,12 +70,33 @@
             android:layout_height="45dp"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="8dp"
-            android:backgroundTint="@color/white"
+            android:backgroundTint="@color/black"
             android:fontFamily="sans-serif-condensed-medium"
             android:hint="Masukkan Email"
             android:inputType="text"
-            android:textColor="@color/white"
-            android:textColorHint="@color/white"
+            android:textColorHint="@color/black"
+            android:textSize="16sp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:text="Alamat"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/alamat_reg"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:hint="Masukkan Alamat"
+            android:inputType="text"
+            android:textColorHint="@color/black"
             android:textSize="16sp" />
 
 
@@ -89,7 +108,7 @@
             android:layout_marginBottom="8dp"
             android:fontFamily="sans-serif-condensed-medium"
             android:text="No. Telpon"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:textSize="20sp" />
 
         <EditText
@@ -97,12 +116,10 @@
             android:layout_width="match_parent"
             android:layout_height="45dp"
             android:layout_marginBottom="8dp"
-            android:backgroundTint="@color/white"
+           android:textColorHint="@color/black"
             android:fontFamily="sans-serif-condensed-medium"
             android:hint="Masukkan No. Telpon"
             android:inputType="phone"
-            android:textColor="@color/white"
-            android:textColorHint="@color/white"
             android:textSize="16sp" />
 
 
@@ -114,7 +131,7 @@
             android:layout_marginBottom="8dp"
             android:fontFamily="sans-serif-condensed-medium"
             android:text="Password"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:textSize="20sp" />
 
         <EditText
@@ -123,38 +140,13 @@
             android:layout_height="45dp"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="8dp"
-            android:backgroundTint="@color/white"
             android:fontFamily="sans-serif-condensed-medium"
             android:hint="Masukkan Password"
             android:inputType="textPassword"
-            android:textColor="@color/white"
-            android:textColorHint="@color/white"
+            android:textColorHint="@color/black"
             android:textSize="16sp" />
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="4dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="8dp"
-            android:fontFamily="sans-serif-condensed-medium"
-            android:text="Alamat"
-            android:textColor="@color/white"
-            android:textSize="20sp" />
 
-        <EditText
-            android:id="@+id/alamat_reg"
-            android:layout_width="match_parent"
-            android:layout_height="45dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="8dp"
-            android:backgroundTint="@color/white"
-            android:fontFamily="sans-serif-condensed-medium"
-            android:hint="Masukkan Alamat"
-            android:inputType="text"
-            android:textColor="@color/white"
-            android:textColorHint="@color/white"
-            android:textSize="16sp" />
 
         <Button
             android:id="@+id/btn_register_reglayout"
