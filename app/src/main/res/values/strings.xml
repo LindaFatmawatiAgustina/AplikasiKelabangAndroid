@@ -1,4 +1,13 @@
 <resources>
     <string name="app_name">Kelabang</string>
     <string name="sharepPref">Kelabang</string>
+    <string name="tentang">Manfaat dari pembuatan aplikasi antara lain :\t
+        1.	Bagi Masyarakat :
+        a.	Mempermudah masyarakat melakukan pelaporan jalanan berlubang menggunakan aplikasi kelabang (ketahui dan lapor jalan berlubang) di android.
+        b.	Mempersingkat waktu pelaporan ke DPU tanpa harus melapor ke kantor Pemkab terlebih dahulu.
+        2.	Bagi Dinas :
+        a.	Mempermudah petugas menemukan lokasi jalan yang perlu pembaruan.
+        b.	Meminimalisir penggunaan bahan dan alat yang berlebihan saat akan digunakan dinas untuk perbaikan jalan.</string>
+    <string name="spelatonertext3">-4,\u00205,\u0020-5,\u00206,\u0020-6</string>
+
 </resources>

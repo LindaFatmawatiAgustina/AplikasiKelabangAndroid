@@ -1,9 +1,39 @@
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:fillViewport="true"
     tools:context=".Info">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/blue_btn_bg_color"
+        android:orientation="vertical"
+        android:padding="18dp">
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="100dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/logo" />
+        <TextView
+            android:inputType="textMultiLine"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Manfaat dari pembuatan aplikasi antara lain :\n
+        \n1.	Bagi Masyarakat :
+        \na.	Mempermudah masyarakat melakukan pelaporan jalanan berlubang menggunakan aplikasi kelabang (ketahui dan lapor jalan berlubang) di android.
+        \nb.	Mempersingkat waktu pelaporan ke DPU tanpa harus melapor ke kantor Pemkab terlebih dahulu.
+        \n\n2.	Bagi Dinas :
+        \na.	Mempermudah petugas menemukan lokasi jalan yang perlu pembaruan.
+        \nb.	Meminimalisir penggunaan bahan dan alat yang berlebihan saat akan digunakan dinas untuk perbaikan jalan."
+            />
+    </LinearLayout>
+</ScrollView>
